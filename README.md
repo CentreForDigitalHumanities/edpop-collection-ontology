@@ -55,11 +55,11 @@ After that, run tests with
 pytest
 ```
 
-### Licence
+## Licence
 
 This work is licensed under a [Creative Commons 4.0 Attribution Licence](https://creativecommons.org/licenses/by/4.0/). See [LICENCE](/LICENCE).
 
-### Citation
+## Citation
 
 If you wish to cite this ontology, please use the metadata provided in [CITATION.cff](/CITATION.cff).
 
