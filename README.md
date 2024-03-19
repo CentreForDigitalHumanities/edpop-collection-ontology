@@ -1,5 +1,7 @@
 # EDPOP collection ontology
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10838554.svg)](https://doi.org/10.5281/zenodo.10838554)
+
 This repository describes an [OWL ontology](https://en.wikipedia.org/wiki/Web_Ontology_Language) that is used in the [EDPOP VRE](https://github.com/UUDigitalHumanitieslab/EDPOP).
 
 ## Introduction

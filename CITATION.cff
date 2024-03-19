@@ -12,6 +12,9 @@ authors:
     website: 'https://cdh.uu.nl'
     country: NL
     city: Utrecht
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.10838554
 repository-code: >-
   https://github.com/UUDigitalHumanitieslab/edpop-collection-ontology
 license: CC-BY-4.0
