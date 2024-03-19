@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+title: EDPOP collection ontology
+message: >-
+  If you use this dataset, please cite it using the metadata
+  from this file.
+type: dataset
+authors:
+  - name: >-
+      Research Software Lab, Centre for Digital Humanities,
+      Utrecht University
+    email: cdh@uu.nl
+    website: 'https://cdh.uu.nl'
+    country: NL
+    city: Utrecht
+repository-code: >-
+  https://github.com/UUDigitalHumanitieslab/edpop-collection-ontology
+license: CC-BY-4.0

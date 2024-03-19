@@ -1,8 +1,26 @@
 # EDPOP collection ontology
 
-RDF ontology for the [EDPOP VRE](https://github.com/UUDigitalHumanitieslab/EDPOP). This ontology defines the relationships for managing collections of records and making annotation on them.
+This repository describes an [OWL ontology](https://en.wikipedia.org/wiki/Web_Ontology_Language) that is used in the [EDPOP VRE](https://github.com/UUDigitalHumanitieslab/EDPOP).
 
-The interface uses the collection ontology in combination with a record ontology. In the scope of the EDPOP project, this is the [edop record ontology](https://github.com/UUDigitalHumanitieslab/edpop-record-ontology). The project's goal is to manage and annotate collections of library catalogues, which are described by the record ontology. The collection ontology is implemented separately as it is designed to be model-agnostic: it makes minimal assumptions about the data structure of records.
+## Introduction
+
+In the EDPOP VRE, users can create collections of resources and annotate them. This ontology describes the vocabulary and relationships that is used to manage collections and annotations.
+
+The collection ontology is agnostic to the type of resources that are being collected and annotated. The EDPOP VRE allows users to collect and annotate records in bibliographical catalogues, you could use this vocabulary to describe collections of any linked data resources.
+
+This means that this ontology does _not_ describe the structure of bibliographical data used in EDPOP - that is described in the [EDPOP record ontology](https://github.com/UUDigitalHumanitieslab/edpop-record-ontology).
+
+## Related vocabularies
+
+The ontology relies heavily on existing vocabularies. It is recommended that you familiarise yourself with these specifications before building implementations on the EDPOP collection ontology.
+
+- [RDF](https://www.w3.org/TR/rdf12-schema/)
+- [OWL](https://www.w3.org/TR/owl-features/)
+- [Web Annotation Vocabulary](https://www.w3.org/TR/annotation-vocab/)
+- [ActivityStreams](https://www.w3.org/ns/activitystreams)
+- [FOAF](http://xmlns.com/foaf/)
+
+## Content
 
 ### Repository contents
 
@@ -13,19 +31,36 @@ This repository contains:
 - [example.ttl](/documentation/example.ttl): An small graph that implements the ontology.
 - [test_validate.py](/tests/test_validate.py): A python test that verifies the turtle files in the repository are valid.
 
+### File formats
+
+The `ontology.ttl` and `example.ttl` are [Turtle files](https://en.wikipedia.org/wiki/Turtle_(syntax)). They describe RDF graphs.
+
+Tests are written as [Python](https://www.python.org/) scripts (more detail below).
+
 ### Unit tests
 
-Validation tests are implemented using pytest and are included in the /tests/ directory. Python 3.x is required for this.
+The repository contains tests written in Python. These verify that the turtle files can be parsed without errors, which is useful for detecting typos. The tests do not verify the semantics of the ontology, such as whether it implements OWL correctly.
 
-Install requirements with
+Tests are implemented in [pytest](https://docs.pytest.org/) and located in the [tests](/tests/) directory.
+
+Python 3.8 or higher is required. You will also need [pip](https://pypi.org/project/pip/) to install packages. You can install packages with
 
 ```bash
 pip install tests/requirements.txt
 ```
 
-Run tests with 
+After that, run tests with
 
 ```bash
 pytest
 ```
+
+### Licence
+
+This work is licensed under a [Creative Commons 4.0 Attribution Licence](https://creativecommons.org/licenses/by/4.0/). See [LICENCE](/LICENCE).
+
+### Citation
+
+If you wish to cite this ontology, please use the metadata provided in [CITATION.cff](/CITATION.cff).
+
 
