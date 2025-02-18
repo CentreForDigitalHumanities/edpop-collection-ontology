@@ -60,7 +60,7 @@ Note that even this case, context and membership are different things. Consider 
 
 ```ttl
 _:GreatAuthors a edpopcol:Collection .
-_:Shakespeare rdfs:member _:GreatAuthors .
+_:GreatAuthors rdfs:member _:Shakespeare .
 
 _:a1  a edpopcol:Annotation ;
     oa:hasTarget [ oa:hasSource _:Shakespeare ] .

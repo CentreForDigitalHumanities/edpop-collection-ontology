@@ -49,14 +49,14 @@ _:col1  a edpopcol:Collection ;
 
 # TOY DATA
 
-_:Hamlet        rdfs:member _:col1 .
-_:Claudius      rdfs:member _:col1 .
-_:Gertrude      rdfs:member _:col1 .
-_:Horatio       rdfs:member _:col1 .
-_:Ophelia       rdfs:member _:col1 .
-_:Roosencrantz  rdfs:member _:col1 .
-_:Guildenstern  rdfs:member _:col1 .
-_:Ghost         rdfs:member _:col1 .
+_:col1 rdfs:member _:Hamlet .
+_:col1 rdfs:member _:Claudius .
+_:col1 rdfs:member _:Gertrude .
+_:col1 rdfs:member _:Horatio .
+_:col1 rdfs:member _:Ophelia .
+_:col1 rdfs:member _:Roosencrantz .
+_:col1 rdfs:member _:Guildenstern .
+_:col1 rdfs:member _:Ghost .
 
 # Some initial propositions about the data.
 
