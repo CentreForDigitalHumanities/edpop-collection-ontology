@@ -71,15 +71,15 @@ edpopcol:Project edpopcol:suggestedProperty as:name ,
 # COLLECTIONS
 
 edpopcol:Collection a rdfs:Class ;
-                    rdfs:subClassOf rdf:Bag ,
-                                    as:Collection ;
+                    rdfs:subClassOf rdf:Bag ;
                     rdfs:label "Collection"@en ;
                     rdfs:comment "Collections are unordered sets of resources, assembled by users."@en .
 
 edpopcol:Collection edpopcol:suggestedProperty  as:name,
                                                 as:summary ,
-                                                edpopcol:creator ;
-                                                as:context .
+                                                edpopcol:creator ,
+                                                as:context ,
+                                                rdfs:member .
 
 edpopcol:Collection rdfs:subClassOf _:ContextIsAProject .
 
@@ -116,7 +116,7 @@ edpopcol:ImplementedMotivation owl:oneOf (
 edpopcol:Annotation rdfs:subClassOf [
     a owl:Restriction ;
     owl:onProperty oa:motivatedBy ;
-    owl:allValuesFrom edpocol:ImplementedMotivation
+    owl:allValuesFrom edpopcol:ImplementedMotivation
 ] .
 
 # The context of an annotation is always a project
