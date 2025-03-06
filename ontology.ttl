@@ -78,7 +78,8 @@ edpopcol:Collection a rdfs:Class ;
 edpopcol:Collection edpopcol:suggestedProperty  as:name,
                                                 as:summary ,
                                                 edpopcol:creator ,
-                                                as:context .
+                                                as:context ,
+                                                rdfs:member .
 
 edpopcol:Collection rdfs:subClassOf _:ContextIsAProject .
 
