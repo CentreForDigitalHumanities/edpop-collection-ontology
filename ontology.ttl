@@ -71,8 +71,7 @@ edpopcol:Project edpopcol:suggestedProperty as:name ,
 # COLLECTIONS
 
 edpopcol:Collection a rdfs:Class ;
-                    rdfs:subClassOf rdf:Bag ,
-                                    as:Collection ;
+                    rdfs:subClassOf rdf:Bag ;
                     rdfs:label "Collection"@en ;
                     rdfs:comment "Collections are unordered sets of resources, assembled by users."@en .
 
