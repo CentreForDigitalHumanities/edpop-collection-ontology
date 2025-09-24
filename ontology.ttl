@@ -140,7 +140,7 @@ edpopcol:object     a rdf:Property ;
                     rdfs:label "object"@en ;
                     rdfs:comment "The object of the predicate"@en .
 
-# ANNOTATION SOURCES
+# ANNOTATION SELECTORS
 
 edpopcol:PredicateSelector  rdfs:subClassOf oa:Selector ;
                             rdfs:subClassOf edpopcol:Predicate ;
