@@ -8,6 +8,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
+@prefix edpoprec: <https://dhstatic.hum.uu.nl/edpop-records/0.1.0/> .
 @prefix edpopcol:  <https://dhstatic.hum.uu.nl/edpop-collection/0.1.0-SNAPSHOT#>  .
 
 edpopcol:   a owl:Ontology ;
@@ -140,12 +141,35 @@ edpopcol:object     a rdf:Property ;
                     rdfs:label "object"@en ;
                     rdfs:comment "The object of the predicate"@en .
 
-# ANNOTATION SOURCES
+# FIELD DESCRIPTORS
+# to make annotations specifically on edpoprec:Record fields
+
+edpopcol:Field        a rdfs:Class ;
+                      rdfs:label "Field"@en ;
+                      rdfs:comment "A description of a field of a record"@en .
+
+edpopcol:field        a rdf:Property ;
+                      rdfs:domain edpopcol:Field ;
+                      rdfs:range rdf:Property ;
+                      rdfs:label "field"@en ;
+                      rdfs:comment "The field property of the record"@en .
+
+edpopcol:originalText a rdf:Property ;
+                      rdfs:domain edpopcol:Field ;
+                      rdfs:range xsd:string ;
+                      rdfs:label "original text"@en ;
+                      rdfs:comment "The original text of a particular instance of the field"@en .
+
+# ANNOTATION SELECTORS
 
 edpopcol:PredicateSelector  rdfs:subClassOf oa:Selector ;
                             rdfs:subClassOf edpopcol:Predicate ;
                             rdfs:label "Predicate Selector"@en ;
                             rdfs:comment "Selects a predicate on a resource to annotate."@en .
+
+edpopcol:FieldSelector      rdfs:subClassOf oa:Selector , edpopcol:Field ;
+                            rdfs:label "Field Selector"@en ;
+                            rdfs:comment "Selects a field on a record to annotate."@en .
 
 # ANNOTATION BODIES
 
